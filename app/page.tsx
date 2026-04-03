@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSf4o3T2VqnQclNEQtEFRGVgusr70bMKuKPKhQ-kub9XX96MYQ/viewform?usp=dialog";
+
 export default function Home() {
   const concerns = [
     "練習しているのに上手くならない・スコアが伸びない",
@@ -135,10 +138,12 @@ export default function Home() {
               初回診断の案内を見る
             </Link>
             <Link
-              href="/blog"
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
             >
-              ブログを読む
+              今すぐ申し込む
             </Link>
           </div>
         </div>
@@ -271,76 +276,45 @@ export default function Home() {
 
       {/* Before / After */}
       <section className="bg-slate-50 px-6 py-20 md:px-10 md:py-24">
-  <div className="mx-auto max-w-6xl">
-    <div className="mx-auto max-w-4xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 md:text-base">
-        EVIDENCE
-      </p>
-      <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-        再現性が変わると、
-        <br className="hidden sm:block" />
-        スコア構造も変わる。
-      </h2>
-      <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-        以下は、HGQM導入前後のラウンドデータを比較した実測値です。
-        平均スコアだけでなく、FWキープ率、ドライバー平均距離、GIRの変化からも、
-        再現性の改善がスコア構造そのものを変えていることを確認できます。
-      </p>
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 md:text-base">
+              EVIDENCE
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+              再現性が変わると、
+              <br className="hidden sm:block" />
+              スコア構造も変わる。
+            </h2>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+              以下は、HGQM導入前後のラウンドデータを比較した実測値です。
+              平均スコアだけでなく、FWキープ率、ドライバー平均距離、GIRの変化からも、
+              再現性の改善がスコア構造そのものを変えていることを確認できます。
+            </p>
 
-      <p className="mx-auto mt-6 max-w-4xl text-center text-sm leading-7 text-slate-500">
-        ※数値は、HGQM導入前3か月と導入後6か月のラウンド記録を比較したものです。
-        平均スコアは各期間のラウンド平均、FWキープ率・GIR・ドライバー平均距離は
-        対象期間中の実績平均です。
-      </p>
-    </div>
+            <p className="mx-auto mt-6 max-w-4xl text-center text-sm leading-7 text-slate-500">
+              ※数値は、HGQM導入前3か月と導入後6か月のラウンド記録を比較したものです。
+              平均スコアは各期間のラウンド平均、FWキープ率・GIR・ドライバー平均距離は
+              対象期間中の実績平均です。
+            </p>
+          </div>
 
-    <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-sm font-medium text-slate-500">平均スコア</p>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-          83 → 79
-        </p>
-        <p className="mt-2 text-sm leading-6 text-slate-600">
-          HGQM導入前後のラウンド平均。
-          一時的な好スコアではなく、安定性の改善を示しています。
-        </p>
-      </div>
-
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-sm font-medium text-slate-500">FWキープ率</p>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-          58% → 65%
-        </p>
-        <p className="mt-2 text-sm leading-6 text-slate-600">
-          ティーショットのばらつきが減ることで、
-          次打の難易度が下がりやすくなりました。
-        </p>
-      </div>
-
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-sm font-medium text-slate-500">ドライバー平均距離</p>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-          234y → 251y
-        </p>
-        <p className="mt-2 text-sm leading-6 text-slate-600">
-          無理な出力向上ではなく、
-          ミート率と再現性の改善が平均距離向上につながりました。
-        </p>
-      </div>
-
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-sm font-medium text-slate-500">GIR</p>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-          33% → 44%
-        </p>
-        <p className="mt-2 text-sm leading-6 text-slate-600">
-          フェアウェイキープ率と次打条件の改善により、
-          パーオン率も向上しました。
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {metrics.map((metric) => (
+              <div
+                key={metric.label}
+                className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm"
+              >
+                <p className="text-sm font-medium text-slate-500">{metric.label}</p>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                  {metric.value}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{metric.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Initial Diagnosis */}
       <section className="bg-white px-6 py-20 md:px-10 md:py-24">
@@ -403,12 +377,20 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/initial-diagnosis"
                   className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
                 >
                   初回診断の案内を見る
+                </Link>
+                <Link
+                  href={GOOGLE_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                >
+                  今すぐ申し込む
                 </Link>
               </div>
             </div>

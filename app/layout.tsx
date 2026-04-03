@@ -5,6 +5,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Hi Golf",
   description: "HGQM based data-driven golf improvement studio",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
 };
 
 const headerNavItems = [

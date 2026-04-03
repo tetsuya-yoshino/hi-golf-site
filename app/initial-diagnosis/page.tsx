@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSf4o3T2VqnQclNEQtEFRGVgusr70bMKuKPKhQ-kub9XX96MYQ/viewform?usp=dialog";
+
 const diagnosisSteps = [
   {
     step: "01",
@@ -110,10 +113,12 @@ export default function InitialDiagnosisPage() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/contact"
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
-              お問い合わせはこちら
+              初回診断を申し込む
             </Link>
             <Link
               href="/pricing"
@@ -335,7 +340,7 @@ export default function InitialDiagnosisPage() {
       <section className="bg-slate-900 px-6 py-20 text-white md:px-10">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400 md:text-base">
-            Contact
+            Apply
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
             まずは、自分の課題を整理するところから。
@@ -347,10 +352,12 @@ export default function InitialDiagnosisPage() {
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/contact"
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
-              お問い合わせはこちら
+              初回診断を申し込む
             </Link>
 
             <Link
