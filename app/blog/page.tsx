@@ -50,7 +50,7 @@ export default function BlogPage() {
           </p>
 
           <p className="mx-auto mt-8 max-w-3xl text-xl font-semibold leading-9 text-slate-900 md:text-2xl">
-            問題をその場で直すのではなく、
+            目の前のミスを直すのではなく、
             <br className="hidden sm:block" />
             なぜ崩れるのかを構造で捉える。
           </p>
@@ -72,29 +72,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="bg-white px-6 py-16 md:px-10 md:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 md:text-base">
-            WHY THIS BLOG
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-            上達が続かない理由を、
-            <br className="hidden sm:block" />
-            言語化するために。
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            多くのゴルファーは、ミスが出るたびに修正点を増やしていきます。
-            しかし、それでは改善の軸がぶれやすくなります。
-          </p>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-            Hi Golfのブログは、
-            「なぜ上達が続かないのか」
-            「何を優先して整えるべきか」を、
-            再現性という視点から整理するための読みものです。
-          </p>
-        </div>
-      </section>
 
       {/* Categories */}
       {categories.length > 0 && (

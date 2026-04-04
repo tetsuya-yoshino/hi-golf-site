@@ -84,27 +84,6 @@ const faqItems = [
   },
 ];
 
-const flowSteps = [
-  {
-    step: "01",
-    title: "初回診断",
-    description:
-      "現状を観測し、課題を整理し、改善の優先順位を明確にします。",
-  },
-  {
-    step: "02",
-    title: "改善フェーズの提案",
-    description:
-      "診断結果に基づき、必要な改善段階をご案内します。無理な勧誘は行いません。",
-  },
-  {
-    step: "03",
-    title: "継続的な観測・修正・検証",
-    description:
-      "単発の感覚ではなく、再現可能な状態を作るために改善を積み上げます。",
-  },
-];
-
 export default function PricingPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
@@ -118,91 +97,6 @@ export default function PricingPage() {
           <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             料金プラン
           </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
-            Hi Golfのレッスンは、
-            ただ球を打つための時間ではありません。
-            <br className="hidden sm:block" />
-            課題を観測し、原因を整理し、改善を設計するための時間です。
-          </p>
-
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
-            そのため料金も、
-            「レッスン時間」ではなく
-            「診断と改善設計のプロセス」に基づいて設計しています。
-          </p>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/initial-diagnosis"
-              className="inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-            >
-              初回診断の案内を見る
-            </Link>
-            <Link
-              href="#pricing-structure"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 px-8 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-900 hover:bg-white"
-            >
-              料金体系を見る
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="bg-white px-6 py-20 md:px-10">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            まずは、課題を整理するところから。
-          </h2>
-
-          <div className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            <p>
-              多くのゴルファーは、
-              何を直すべきかが曖昧なまま練習を続けています。
-            </p>
-            <p className="mt-4">
-              しかし改善が続くかどうかは、
-              「たくさん打つこと」よりも、
-              何を優先して直すべきかが整理されているかで決まります。
-            </p>
-            <p className="mt-4">
-              Hi Golfではまず現状を観測し、
-              改善の優先順位を明確にすることを重視しています。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Flow */}
-      <section className="bg-slate-50 px-6 py-20 md:px-10">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 md:text-base">
-              Process
-            </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Hi Golfの料金設計は、
-              改善プロセスに対応しています
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {flowSteps.map((item) => (
-              <div
-                key={item.step}
-                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
-              >
-                <p className="text-sm font-semibold tracking-[0.2em] text-slate-400">
-                  {item.step}
-                </p>
-                <h3 className="mt-3 text-xl font-bold">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -216,14 +110,14 @@ export default function PricingPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 md:text-base">
               Pricing Structure
             </p>
+
             <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-              料金は、レベル別ではなく
-              改善フェーズで設計しています
+              料金は、取り組む内容に応じて設定しています
             </h2>
+
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
-              Hi Golfでは、
-              初心者・中級者・上級者といった区分で価格を分けていません。
-              初回診断で現状を整理し、その上で必要な改善フェーズに応じて、
+              Hi Golfでは、初心者・中級者・上級者といった区分で価格を分けていません。
+              初回診断で現状を整理し、取り組む内容に応じて、
               最適なプログラムをご案内します。
             </p>
           </div>
@@ -253,9 +147,7 @@ export default function PricingPage() {
               </p>
 
               <div className="mt-6 rounded-2xl bg-slate-50 p-5">
-                <p className="text-sm font-semibold text-slate-900">
-                  実施内容
-                </p>
+                <p className="text-sm font-semibold text-slate-900">実施内容</p>
                 <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-700">
                   <li>・クラブ計測（重さ・長さ・スイングウエイト）</li>
                   <li>・ショット計測（ドライバー／ミドルアイアン）</li>
@@ -302,10 +194,8 @@ export default function PricingPage() {
               </div>
 
               <p className="mt-6 text-base leading-7 text-slate-600">
-                すでに課題が明確な方が、
-                確認や微調整を行いたい場合のためのセッションです。
-                継続プログラムの代替ではなく、
-                限定的な用途に向いたプランです。
+                すでに課題が明確な方が、確認や微調整を行いたい場合のためのセッションです。
+                継続プログラムの代替ではなく、限定的な用途に向いたプランです。
               </p>
 
               <div className="mt-6 rounded-2xl bg-slate-50 p-5">
@@ -321,8 +211,7 @@ export default function PricingPage() {
 
               <div className="mt-6 rounded-2xl border border-slate-200 p-5">
                 <p className="text-sm leading-6 text-slate-600">
-                  単発でも対応は可能ですが、
-                  再現性の改善は本来、
+                  単発でも対応は可能ですが、再現性の改善は本来、
                   観測 → 修正 → 検証を継続することで成立します。
                 </p>
               </div>
@@ -360,8 +249,7 @@ export default function PricingPage() {
                 継続プログラムは、すべて1回90分で設計しています。
               </p>
               <p className="mt-3 text-sm leading-6 text-slate-300">
-                理由は、単に打つだけでなく、
-                観測・修正・検証までを1回の中で行うためです。
+                理由は、単に打つだけでなく、観測・修正・検証までを1回の中で行うためです。
                 Hi Golfでは、その場の感覚ではなく、
                 再現可能な改善プロセスを重視しています。
               </p>
@@ -436,9 +324,7 @@ export default function PricingPage() {
                       <li
                         key={feature}
                         className={`text-sm leading-6 ${
-                          program.featured
-                            ? "text-slate-100"
-                            : "text-slate-700"
+                          program.featured ? "text-slate-100" : "text-slate-700"
                         }`}
                       >
                         ・{feature}
@@ -451,8 +337,7 @@ export default function PricingPage() {
 
             <div className="mt-8 rounded-2xl bg-white p-5 ring-1 ring-slate-200">
               <p className="text-sm leading-7 text-slate-600">
-                継続プログラムは、
-                初回診断の結果に基づいてご案内します。
+                継続プログラムは、初回診断の結果に基づいてご案内します。
                 その場で申込を決める必要はありません。
                 診断結果と改善方針をご確認いただいたうえで、
                 必要に応じてご検討ください。
@@ -463,9 +348,12 @@ export default function PricingPage() {
           {/* Notes */}
           <div className="mx-auto mt-10 max-w-4xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
             <p className="text-sm leading-7 text-slate-600">
-              ※ 表示価格はすべて税込です。<br />
-              ※ 初回診断・単発セッション・継続プログラムはいずれも1回90分です。<br />
-              ※ 継続プログラムは、初回診断の結果に基づいてご案内します。<br />
+              ※ 表示価格はすべて税込です。
+              <br />
+              ※ 初回診断・単発セッション・継続プログラムはいずれも1回90分です。
+              <br />
+              ※ 継続プログラムは、初回診断の結果に基づいてご案内します。
+              <br />
               ※ プログラム内容は今後調整する場合があります。
             </p>
           </div>
@@ -500,8 +388,7 @@ export default function PricingPage() {
                 課題を単発で確認したい方
               </h3>
               <p className="mt-3 leading-7 text-slate-600">
-                すでに課題が明確で、
-                必要なタイミングで確認や調整を行いたい方は
+                すでに課題が明確で、必要なタイミングで確認や調整を行いたい方は
                 単発セッションが向いています。
               </p>
             </div>
@@ -511,8 +398,7 @@ export default function PricingPage() {
                 本気で改善を定着させたい方
               </h3>
               <p className="mt-3 leading-7 text-slate-600">
-                診断結果をもとに、
-                継続プログラムで観測・修正・検証を繰り返すことが、
+                診断結果をもとに、継続プログラムで観測・修正・検証を繰り返すことが、
                 最も効果的な改善ルートです。
               </p>
             </div>

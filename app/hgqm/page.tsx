@@ -106,12 +106,7 @@ export default function HGQMPage() {
             >
               初回診断の案内を見る
             </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-            >
-              料金を見る
-            </Link>
+           
           </div>
         </div>
       </section>
@@ -324,12 +319,7 @@ export default function HGQMPage() {
             >
               初回診断の案内を見る
             </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-            >
-              料金を見る
-            </Link>
+          
           </div>
         </div>
       </section>

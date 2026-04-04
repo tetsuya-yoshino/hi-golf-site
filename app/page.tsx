@@ -96,26 +96,29 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-slate-50 to-white px-6 py-20 text-center md:px-10 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 md:text-base">
-            Data-Driven Golf Instruction
-          </p>
+          <p className="text-sm font-semibold tracking-[0.2em] text-slate-500 uppercase">
+  Hi Golf Policy
+</p>
 
-          <h1 className="mx-auto mt-4 max-w-5xl text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            再現性で、
-            <br className="hidden sm:block" />
-            ゴルフは変わる。
-          </h1>
+<p className="mt-4 text-base md:text-lg font-medium text-slate-700">
+  上達を、感覚ではなく再現性で設計する。
+</p>
 
-          <p className="mt-4 text-lg text-slate-600 sm:text-xl">
-            再現性が変われば、スコアも変わる。
-          </p>
+<h1 className="mt-6 text-5xl font-bold tracking-tight text-slate-900 md:text-7xl leading-tight">
+  再現性で、<br />
+  ゴルフは変わる。
+</h1>
+
+<p className="mt-6 text-lg md:text-xl text-slate-600">
+  再現性が変われば、スコアも変わる。
+</p>
 
           <div className="mx-auto mt-8 max-w-3xl space-y-4 text-base leading-8 text-slate-600 md:text-lg">
             <p>
-              多くのゴルファーは、悪い動きをその場で直そうとします。
+              多くのゴルファーは、目の前のミスを直そうとします。
             </p>
             <p>
-              しかし、それでは上達は続きません。スコアを左右しているのは、
+              しかし、それではあなたのゴルフは変わりません。スコアを左右しているのは、
               一発のナイスショットではなく、
               <span className="font-semibold text-slate-900">
                 「同じ結果を、繰り返せるか」
@@ -130,22 +133,6 @@ export default function Home() {
             “ばらつきが制御されていないこと”にあります。
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/initial-diagnosis"
-              className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-            >
-              初回診断の案内を見る
-            </Link>
-            <Link
-              href={GOOGLE_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-            >
-              今すぐ申し込む
-            </Link>
-          </div>
         </div>
       </section>
 
